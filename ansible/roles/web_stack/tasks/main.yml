@@ -1,16 +1,16 @@
 ---
 - name: Generate dynamic system dashboard template
-  template:
-    src: index.html.j2
-    dest: /tmp/index_{{ ansible_hostname }}.html
+  ansible.builtin.template:
+    src: dashboard.html.j2
+    dest: /tmp/dashboard.html
     mode: '0644'
 
 - name: Post-Deployment Verification Check (Automated Quality Gate)
-  stat:
-    path: /tmp/index_{{ ansible_hostname }}.html
-  register: file_check
+  ansible.builtin.stat:
+    path: /tmp/dashboard.html
+  register: dashboard_status
 
 - name: Fail if verification dashboard was not generated
-  fail:
-    msg: "Quality Gate Failed!"
-  when: not file_check.stat.exists
+  ansible.builtin.fail:
+    msg: "CRITICAL COMPLIANCE FAILURE: Post-deployment dashboard is missing!"
+  when: not dashboard_status.stat.exists

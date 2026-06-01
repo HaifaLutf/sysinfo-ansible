@@ -1,7 +1,7 @@
 ---
 - name: Execute End-to-End Financial Server Provisioning
-  hosts: financial_servers
-  become: no
+  hosts: all
+  gather_facts: true
 
   roles:
     - compliance_hardening
