@@ -1,5 +1,10 @@
 # Multi-Node Financial Infrastructure Automation Pipeline
 
+
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/8b9454be-b774-4fdf-acb0-e9cbc4225432" />
+
+
+
 An automated, compliance-hardened infrastructure scaffolding and configuration management pipeline. This repository demonstrates a decoupled, secure GitOps blueprint designed to provision, secure, and validate decentralized target nodes using **Terraform**, **Ansible**, and **Ansible Vault**.
 
 ---
