@@ -1,0 +1,8 @@
+---
+- name: Execute End-to-End Financial Server Provisioning
+  hosts: financial_servers
+  become: no
+
+  roles:
+    - compliance_hardening
+    - web_stack

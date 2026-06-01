@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Services Node: {{ ansible_hostname }}</title>
+</head>
+<body style="font-family: Arial; margin: 40px; background: #f4f6f9;">
+    <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h1 style="color: #2c3e50;">Deployment Verification Status: ONLINE</h1>
+        <hr>
+        <p><strong>System Capacity Metrics for Optimization Planning:</strong></p>
+        <ul>
+            <li><strong>Target Hostname:</strong> {{ ansible_hostname }}</li>
+            <li><strong>Operating System:</strong> {{ ansible_distribution }} {{ ansible_distribution_version }}</li>
+            <li><strong>Total Allocated Memory:</strong> {{ ansible_memtotal_mb }} MB</li>
+        </ul>
+    </div>
+</body>
+</html>
